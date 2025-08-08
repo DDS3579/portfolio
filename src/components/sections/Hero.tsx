@@ -56,9 +56,21 @@ export default function Hero() {
         </div>
 
         <div className="flex justify-center lg:justify-end">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="relative">
-            <img src={avatar} alt="Void Bloom avatar" className="h-64 w-64 rounded-2xl object-cover glass shadow-glow animate-breathing" loading="lazy" />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ rotate: -1.5, scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 200, damping: 16 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+            <div aria-hidden className="absolute -inset-10 -z-20 rounded-full bg-gradient-primary blur-3xl opacity-20" />
+            <img
+              src={avatar}
+              alt="Void Bloom professional avatar"
+              className="h-56 w-56 md:h-72 md:w-72 lg:h-80 lg:w-80 rounded-3xl object-cover glass shadow-glow ring-1 ring-ring/40 animate-breathing"
+              loading="lazy"
+            />
             <div className="absolute -inset-2 rounded-3xl -z-10 rainbow-border" />
           </motion.div>
         </div>
