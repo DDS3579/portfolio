@@ -6,11 +6,13 @@ import Skills from "@/components/sections/Skills";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/Footer";
 import CommandMenu from "@/components/CommandMenu";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const Index = () => {
   return (
     <div className="font-sans">
       <Header />
+      <ScrollProgress />
       <main>
         <Hero />
         <Projects />
