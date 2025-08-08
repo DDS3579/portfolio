@@ -37,25 +37,25 @@ export default function Hero() {
       <CustomCursor />
 
       <div className="container grid lg:grid-cols-2 gap-10 items-center">
-        <div className="text-left">
-          <h1 className="font-display text-5xl lg:text-7xl leading-tight tracking-tight mb-6">
+        <div className="text-center lg:text-left order-2 lg:order-1">
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-7xl leading-tight tracking-tight mb-6">
             Building delightful
             <br />
             <span className="text-gradient">interfaces</span> that convert
           </h1>
-          <p className="text-muted-foreground text-lg max-w-xl mb-6">
+          <p className="text-muted-foreground text-lg max-w-xl mb-6 mx-auto lg:mx-0">
             I craft premium, high‑performance React experiences with meticulous UI/UX, smooth motion, and conversion‑focused design.
           </p>
           <div className="text-xl mb-8">
             <TypingCycle words={["React Developer", "UI/UX Designer", "Full‑Stack Creator"]} />
           </div>
-          <div className="flex flex-wrap gap-4">
+          <div className="mt-6 flex flex-wrap gap-4 justify-center lg:justify-start">
             <Button variant="hero" data-cursor="hover"><a href="#projects">Explore My Work</a></Button>
             <Button variant="glass" data-cursor="hover"><a href="#contact">Let's Connect</a></Button>
           </div>
         </div>
 
-        <div className="flex justify-center lg:justify-end">
+        <div className="flex justify-center lg:justify-end order-1 lg:order-2">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
