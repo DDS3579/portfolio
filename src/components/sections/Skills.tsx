@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { SiHtml5, SiCss3, SiJavascript, SiTypescript, SiNextdotjs, SiReact, SiFigma, SiThreedotjs, SiFramer, SiGreensock } from "react-icons/si";
 const skills = [
   { name: "HTML", Icon: SiHtml5 },
@@ -37,10 +38,19 @@ export default function Skills() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: i * 0.03 }}
                 >
-                  <Badge variant="secondary" className="glass hover-scale ring-1 ring-ring/40 shadow-elegant p-2" aria-label={s.name} title={s.name}>
-                    <s.Icon size={18} aria-hidden="true" />
-                    <span className="sr-only">{s.name}</span>
-                  </Badge>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Badge
+                        variant="secondary"
+                        className="glass hover-scale ring-1 ring-ring/40 shadow-elegant p-2"
+                        aria-label={s.name}
+                      >
+                        <s.Icon size={18} aria-hidden="true" />
+                        <span className="sr-only">{s.name}</span>
+                      </Badge>
+                    </TooltipTrigger>
+                    <TooltipContent side="top">{s.name}</TooltipContent>
+                  </Tooltip>
                 </motion.div>
               ))}
             </div>
