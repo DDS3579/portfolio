@@ -13,8 +13,8 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20">
-      <div className="container grid lg:grid-cols-2 gap-10 items-start">
+    <section id="contact" className="py-16 md:py-20">
+      <div className="container grid lg:grid-cols-2 gap-6 md:gap-10 items-start">
         <div className="glass rounded-xl p-8 shadow-elegant">
           <h2 className="text-3xl font-display font-semibold mb-4">Let's work together</h2>
           <p className="text-muted-foreground mb-6">Have a project or role in mind? Drop a line or connect via socials.</p>

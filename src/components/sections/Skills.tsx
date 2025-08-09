@@ -2,21 +2,18 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 
 const skills = [
-  { name: "React", group: "Frontend" },
-  { name: "TypeScript", group: "Frontend" },
-  { name: "Tailwind", group: "Frontend" },
-  { name: "Framer Motion", group: "Frontend" },
-  { name: "Node.js", group: "Backend" },
-  { name: "Supabase", group: "Backend" },
+  { name: "HTML", group: "Core" },
+  { name: "CSS", group: "Core" },
+  { name: "JavaScript", group: "Core" },
+  { name: "TypeScript", group: "Core" },
+  { name: "React.js", group: "Frameworks" },
+  { name: "Next.js", group: "Frameworks" },
   { name: "Figma", group: "Design" },
-  { name: "ShadCN", group: "Frontend" },
-  { name: "Zustand", group: "Tools" },
-  { name: "Vite", group: "Tools" },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 relative overflow-hidden">
+    <section id="skills" className="py-16 md:py-20 relative overflow-hidden">
       <div aria-hidden className="absolute inset-0 -z-10 pointer-events-none">
         <div className="absolute left-1/4 top-6 h-32 w-32 rounded-full bg-gradient-primary opacity-20 blur-3xl animate-float" />
         <div className="absolute right-1/5 bottom-0 h-40 w-40 rounded-full bg-gradient-primary opacity-10 blur-3xl animate-float" />
@@ -40,10 +37,10 @@ export default function Skills() {
             <h3 className="font-medium mb-4">Proficiency Highlights</h3>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: "Frontend", level: 95 },
-                { label: "Design", level: 85 },
-                { label: "Performance", level: 90 },
-                { label: "Backend", level: 70 },
+                { label: "HTML/CSS", level: 95 },
+                { label: "JavaScript/TypeScript", level: 90 },
+                { label: "React/Next.js", level: 92 },
+                { label: "Design (Figma)", level: 85 },
               ].map((x) => (
                 <div key={x.label} className="">
                   <div className="flex justify-between text-sm mb-1"><span>{x.label}</span><span className="text-muted-foreground">{x.level}%</span></div>

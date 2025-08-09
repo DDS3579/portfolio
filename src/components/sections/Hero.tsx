@@ -27,7 +27,7 @@ function TypingCycle({ words }: { words: string[] }) {
 
 export default function Hero() {
   return (
-    <section id="home" className="relative pt-28 md:pt-32 pb-24 overflow-hidden">
+    <section id="home" className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
       {/* Ambient particles */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-20 -left-10 h-72 w-72 rounded-full bg-gradient-primary blur-3xl opacity-20" />
@@ -36,7 +36,7 @@ export default function Hero() {
 
       <CustomCursor />
 
-      <div className="container grid lg:grid-cols-2 gap-10 items-center">
+      <div className="container grid lg:grid-cols-2 gap-8 md:gap-10 items-center">
         <div className="text-center lg:text-left order-2 lg:order-1">
           <h1 className="font-display text-4xl sm:text-5xl lg:text-7xl leading-tight tracking-tight mb-6">
             Building delightful

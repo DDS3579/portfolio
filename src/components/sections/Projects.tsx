@@ -39,10 +39,10 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-16 md:py-20">
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-display font-semibold mb-10">Featured Projects</h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 items-stretch">
           {projects.map((p, i) => (
             <motion.div key={p.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}>
               <Card className="group overflow-hidden glass shadow-elegant hover:shadow-glow transition h-full flex flex-col min-h-[420px]">
