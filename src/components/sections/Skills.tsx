@@ -61,15 +61,25 @@ export default function Skills() {
             <h3 className="font-medium mb-4">Proficiency Highlights</h3>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: "HTML/CSS", level: 95 },
-                { label: "JavaScript/TypeScript", level: 90 },
-                { label: "React/Next.js", level: 92 },
-                { label: "Design (Figma)", level: 85 },
+                { name: "HTML/CSS", icons: [SiHtml5, SiCss3], level: 95 },
+                { name: "JavaScript/TypeScript", icons: [SiJavascript, SiTypescript], level: 90 },
+                { name: "React/Next.js", icons: [SiReact, SiNextdotjs], level: 92 },
+                { name: "Design (Figma)", icons: [SiFigma], level: 85 },
               ].map((x) => (
-                <div key={x.label} className="">
-                  <div className="flex justify-between text-sm mb-1"><span>{x.label}</span><span className="text-muted-foreground">{x.level}%</span></div>
+                <div key={x.name} className="">
+                  <div className="flex items-center gap-3 mb-2" aria-label={x.name}>
+                    {x.icons.map((Icon, idx) => (
+                      <Icon key={idx} size={32} aria-hidden className={idx === 0 ? "text-foreground" : "text-primary"} />
+                    ))}
+                  </div>
                   <div className="h-2 rounded-full bg-secondary overflow-hidden">
-                    <motion.div className="h-full bg-gradient-primary" initial={{ width: 0 }} whileInView={{ width: `${x.level}%` }} viewport={{ once: true }} transition={{ duration: 0.8 }} />
+                    <motion.div
+                      className="h-full bg-gradient-primary"
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${x.level}%` }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8 }}
+                    />
                   </div>
                 </div>
               ))}
