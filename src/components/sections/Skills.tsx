@@ -19,14 +19,24 @@ export default function Skills() {
         <div className="absolute right-1/5 bottom-0 h-40 w-40 rounded-full bg-gradient-primary opacity-10 blur-3xl animate-float" />
       </div>
       <div className="container">
-        <h2 className="text-3xl md:text-4xl font-display font-semibold mb-10">Technical Skills</h2>
+        <h2 className="text-3xl md:text-4xl font-display font-semibold mb-4">Technical Skills</h2>
+        <div className="h-0.5 w-16 bg-gradient-primary rounded-full mb-8" aria-hidden />
         <div className="grid md:grid-cols-2 gap-8">
           <div className="glass rounded-xl p-6 shadow-elegant">
             <h3 className="font-medium mb-4">Skill Cloud</h3>
             <div className="flex flex-wrap gap-3">
               {skills.map((s, i) => (
-                <motion.div key={s.name} whileHover={{ scale: 1.06 }}>
-                  <Badge variant="secondary" className="glass">{s.name}</Badge>
+                <motion.div
+                  key={s.name}
+                  whileHover={{ scale: 1.06 }}
+                  initial={{ opacity: 0, y: 8 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: i * 0.03 }}
+                >
+                  <Badge variant="secondary" className="glass hover-scale ring-1 ring-ring/40 shadow-elegant">
+                    {s.name}
+                  </Badge>
                 </motion.div>
               ))}
             </div>
