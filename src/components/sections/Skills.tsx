@@ -37,7 +37,7 @@ export default function Skills() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: i * 0.03 }}
                 >
-                  <Badge variant="secondary" className="glass hover-scale ring-1 ring-ring/40 shadow-elegant p-2" aria-label={s.name}>
+                  <Badge variant="secondary" className="glass hover-scale ring-1 ring-ring/40 shadow-elegant p-2" aria-label={s.name} title={s.name}>
                     <s.Icon size={18} aria-hidden="true" />
                     <span className="sr-only">{s.name}</span>
                   </Badge>
