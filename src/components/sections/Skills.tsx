@@ -1,14 +1,17 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-
+import { SiHtml5, SiCss3, SiJavascript, SiTypescript, SiNextdotjs, SiReact, SiFigma, SiThreedotjs, SiFramer, SiGreensock } from "react-icons/si";
 const skills = [
-  { name: "HTML", group: "Core" },
-  { name: "CSS", group: "Core" },
-  { name: "JavaScript", group: "Core" },
-  { name: "TypeScript", group: "Core" },
-  { name: "React.js", group: "Frameworks" },
-  { name: "Next.js", group: "Frameworks" },
-  { name: "Figma", group: "Design" },
+  { name: "HTML", Icon: SiHtml5 },
+  { name: "CSS", Icon: SiCss3 },
+  { name: "JavaScript", Icon: SiJavascript },
+  { name: "TypeScript", Icon: SiTypescript },
+  { name: "React.js", Icon: SiReact },
+  { name: "Next.js", Icon: SiNextdotjs },
+  { name: "Figma", Icon: SiFigma },
+  { name: "Three.js", Icon: SiThreedotjs },
+  { name: "Framer Motion", Icon: SiFramer },
+  { name: "GSAP", Icon: SiGreensock },
 ];
 
 export default function Skills() {
@@ -34,13 +37,14 @@ export default function Skills() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: i * 0.03 }}
                 >
-                  <Badge variant="secondary" className="glass hover-scale ring-1 ring-ring/40 shadow-elegant">
-                    {s.name}
+                  <Badge variant="secondary" className="glass hover-scale ring-1 ring-ring/40 shadow-elegant p-2" aria-label={s.name}>
+                    <s.Icon size={18} aria-hidden="true" />
+                    <span className="sr-only">{s.name}</span>
                   </Badge>
                 </motion.div>
               ))}
             </div>
-            <p className="text-sm text-muted-foreground mt-4">Currently learning: <span className="text-gradient font-medium">Three.js</span></p>
+            <p className="text-sm text-muted-foreground mt-4">Currently learning: <span className="text-gradient font-medium">Next.js</span></p>
           </div>
 
           <div className="glass rounded-xl p-6 shadow-elegant">
