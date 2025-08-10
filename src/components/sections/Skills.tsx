@@ -59,35 +59,26 @@ export default function Skills() {
 
           <div className="glass rounded-xl p-6 shadow-elegant">
             <h3 className="font-medium mb-4">Proficiency Highlights</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div className="grid grid-cols-2 gap-4">
               {[
-                { name: "Design (Figma)", icons: [SiFigma], level: 85 },
-                { name: "React/Next.js", icons: [SiReact, SiNextdotjs], level: 92 },
-                { name: "JavaScript/TypeScript", icons: [SiJavascript, SiTypescript], level: 90 },
                 { name: "HTML/CSS", icons: [SiHtml5, SiCss3], level: 95 },
+                { name: "JavaScript/TypeScript", icons: [SiJavascript, SiTypescript], level: 90 },
+                { name: "React/Next.js", icons: [SiReact, SiNextdotjs], level: 92 },
+                { name: "Design (Figma)", icons: [SiFigma], level: 85 },
               ].map((x) => (
-                <div key={x.name} className="group rounded-xl p-4 border border-border/50 glass hover-scale shadow-elegant">
-                  <div className="flex items-center gap-3 mb-3" aria-label={x.name}>
-                    <div className="flex -space-x-2">
-                      {x.icons.map((Icon, idx) => (
-                        <div key={idx} className="rounded-full p-2 bg-card ring-1 ring-ring/40 shadow-glow">
-                          <Icon size={40} aria-hidden className={idx === 0 ? "text-foreground" : "text-primary"} />
-                        </div>
-                      ))}
-                    </div>
-                    <span className="sr-only">{x.name}</span>
+                <div key={x.name} className="">
+                  <div className="flex items-center gap-3 mb-2" aria-label={x.name}>
+                    {x.icons.map((Icon, idx) => (
+                      <Icon key={idx} size={32} aria-hidden className={idx === 0 ? "text-foreground" : "text-primary"} />
+                    ))}
                   </div>
-                  <div className="h-3 rounded-full bg-secondary/70 overflow-hidden relative">
+                  <div className="h-2 rounded-full bg-secondary overflow-hidden">
                     <motion.div
-                      className="h-full bg-gradient-primary shadow-glow"
+                      className="h-full bg-gradient-primary"
                       initial={{ width: 0 }}
                       whileInView={{ width: `${x.level}%` }}
                       viewport={{ once: true }}
-                      transition={{ duration: 1.1 }}
-                    />
-                    <div
-                      className="absolute inset-0 pointer-events-none opacity-30 bg-[repeating-linear-gradient(90deg,transparent,transparent_12px,hsla(var(--primary)/0.15)_12px,hsla(var(--primary)/0.15)_24px)]"
-                      aria-hidden
+                      transition={{ duration: 0.8 }}
                     />
                   </div>
                 </div>
