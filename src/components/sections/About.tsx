@@ -19,9 +19,10 @@ export default function About() {
           <div className="relative pl-6">
             <div className="absolute left-2 top-0 bottom-0 w-px bg-border" />
             {[
-              { year: "2025", text: "Senior Front‑end — Built multi‑tenant SaaS platform." },
-              { year: "2023", text: "Lead UI/UX — Launched design system & motion library." },
-              { year: "2021", text: "Front‑end Dev — Shipped high‑traffic e‑commerce features." },
+              { year: "2025", text: "Founder at Digira, React Developer & UI / UX Designer" },
+              {year: "2024", text:"Got into UI / UX Design"},
+              { year: "2022", text: "Learnt React and got into Building Projects" },
+              { year: "2021", text: "Started with Front-End Development Working on Small Projects" },
             ].map((item, i) => (
               <motion.div key={item.year} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="mb-6">
                 <div className="flex items-center gap-3">

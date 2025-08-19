@@ -41,8 +41,8 @@ export default function Header() {
     <header className={`fixed top-0 left-0 right-0 z-40 transition-all ${scrolled ? "glass border-b" : "bg-transparent"}`}>
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2" aria-label="Void Bloom home">
-          <div className="h-8 w-8 rounded-md bg-gradient-primary shadow-glow animate-breathing" />
-          <span className="font-display text-lg tracking-tight">Void Bloom</span>
+          <img src="https://avatars.githubusercontent.com/u/87577570" className="h-8 w-8 rounded-md bg-gradient-primary shadow-glow animate-breathing" />
+          <span className="font-display text-lg tracking-tight">Divya D. Sharma</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import avatar from "@/assets/avatar-neo.jpg";
+// import avatar from "@/assets/avatar-neo.jpg";
 import { Button } from "@/components/ui/button";
 import CustomCursor from "@/components/CustomCursor";
 import { useEffect, useState } from "react";
@@ -14,20 +14,35 @@ function TypingCycle({ words }: { words: string[] }) {
     const end = current.length;
     const interval = setInterval(() => {
       setSub((s) => {
-        if (dir === 1 && s >= end) { setDir(-1); return s; }
-        if (dir === -1 && s <= 0) { setDir(1); setIndex((i) => (i + 1) % words.length); return 0; }
+        if (dir === 1 && s >= end) {
+          setDir(-1);
+          return s;
+        }
+        if (dir === -1 && s <= 0) {
+          setDir(1);
+          setIndex((i) => (i + 1) % words.length);
+          return 0;
+        }
         return s + dir;
       });
     }, 100);
     return () => clearInterval(interval);
   }, [words, index, dir]);
 
-  return <span className="text-gradient">{words[index].slice(0, sub)}<span className="opacity-40">|</span></span>;
+  return (
+    <span className="text-gradient">
+      {words[index].slice(0, sub)}
+      <span className="opacity-40">|</span>
+    </span>
+  );
 }
 
 export default function Hero() {
   return (
-    <section id="home" className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
+    <section
+      id="home"
+      className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden"
+    >
       {/* Ambient particles */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-20 -left-10 h-72 w-72 rounded-full bg-gradient-primary blur-3xl opacity-20" />
@@ -44,14 +59,28 @@ export default function Hero() {
             <span className="text-gradient">interfaces</span> that convert
           </h1>
           <p className="text-muted-foreground text-lg max-w-xl mb-6 mx-auto lg:mx-0">
-            I craft premium, high‑performance React experiences with meticulous UI/UX, smooth motion, and conversion‑focused design.
+            I craft premium, high‑performance React experiences with meticulous
+            UI/UX, smooth motion, and conversion‑focused design.
           </p>
           <div className="text-xl mb-8">
-            <TypingCycle words={["React Developer", "UI/UX Designer", "Full‑Stack Creator"]} />
+            <TypingCycle
+              words={[
+                "React Developer",
+                "UI/UX Designer",
+                "Front-End Developer",
+                "Next.js Developer",
+                "Tech Enthusiast",
+                "AI Enthusiast",
+              ]}
+            />
           </div>
           <div className="mt-6 flex flex-wrap gap-4 justify-center lg:justify-start">
-            <Button variant="hero" data-cursor="hover"><a href="#projects">Explore My Work</a></Button>
-            <Button variant="glass" data-cursor="hover"><a href="#contact">Let's Connect</a></Button>
+            <Button variant="hero" data-cursor="hover">
+              <a href="#projects">Explore My Work</a>
+            </Button>
+            <Button variant="glass" data-cursor="hover">
+              <a href="#contact">Let's Connect</a>
+            </Button>
           </div>
         </div>
 
@@ -64,9 +93,12 @@ export default function Hero() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div aria-hidden className="absolute -inset-10 -z-20 rounded-full bg-gradient-primary blur-3xl opacity-20" />
+            <div
+              aria-hidden
+              className="absolute -inset-10 -z-20 rounded-full bg-gradient-primary blur-3xl opacity-20"
+            />
             <img
-              src={avatar}
+              src={"https://avatars.githubusercontent.com/u/87577570"}
               alt="Void Bloom professional avatar"
               className="h-56 w-56 md:h-72 md:w-72 lg:h-80 lg:w-80 rounded-3xl object-cover glass shadow-glow ring-1 ring-ring/40 animate-breathing"
               loading="lazy"

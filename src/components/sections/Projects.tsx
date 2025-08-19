@@ -1,39 +1,39 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import analyticsImg from "@/assets/project-analytics.jpg";
-import commerceImg from "@/assets/project-commerce.jpg";
-import portfolioImg from "@/assets/project-portfolio.jpg";
+import picklesImg from "@/assets/pickle_img.png";
+import commerceImg from "@/assets/clothing_img.png";
+import portfolioImg from "@/assets/food_img.png";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Code2 } from "lucide-react";
 
 const projects = [
   {
-    title: "SaaS Analytics Dashboard",
-    image: analyticsImg,
-    stack: ["React", "Recharts", "Tailwind", "ShadCN"],
-    result: "🚀 40% conversion increase",
-    description: "A data‑rich dashboard with real‑time charts and glass UI.",
-    demo: "#",
-    code: "#",
+    title: "Pickles E-Commerce Website",
+    image: picklesImg,
+    stack: ["React", "GSAP", "Tailwind", "ShadCN", "Framer-Motion"],
+    result: "40% conversion increase",
+    description: "A website build for Pickle brands to boost their sales.",
+    demo: "https://dds3579.github.io/mithila-magic-pickle-shop/",
+    code: "https://www.github.com/dds3579/mithila-magic-pickle-shop",
   },
   {
-    title: "E‑commerce Experience",
+    title: "Clothing E‑commerce Experience",
     image: commerceImg,
-    stack: ["React", "Stripe", "Zustand", "Framer Motion"],
-    result: "💳 +22% checkout completion",
+    stack: ["React", "TypeScript", "Tailwind", "Framer-Motion", "Vite"],
+    result: "+20% Increase in Sale",
     description: "Immersive product pages and frictionless cart flows.",
-    demo: "#",
-    code: "#",
+    demo: "https://dds3579.github.io/clothing_demo_two/",
+    code: "https://github.com/dds3579/clothing_demo_two/",
   },
   {
-    title: "Portfolio Engine",
+    title: "Foodsite Demo",
     image: portfolioImg,
-    stack: ["Vite", "TypeScript", "Framer Motion", "ShadCN"],
+    stack: ["HTML", "CSS", "Bootstrap", "JavaScript"],
     result: "✨ 95+ Lighthouse scores",
     description: "Blazing fast, animated portfolio framework.",
-    demo: "#",
-    code: "#",
+    demo: "https://dds3579.github.io/foodsite",
+    code: "https://github.com/dds3579/foodsite",
   },
 ];
 
